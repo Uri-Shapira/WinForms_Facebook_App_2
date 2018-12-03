@@ -1,0 +1,17 @@
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\FBAppUI\bin\Debug\FBAppUI.exe
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\FBAppUI\bin\Debug\FBAppUI.pdb
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\FBAppUI\bin\Debug\Facebook.dll
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\FBAppUI\bin\Debug\FacebookAppLogic.dll
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\FBAppUI\bin\Debug\FbGraphApiWrapper.dll
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\FBAppUI\bin\Debug\FacebookAppLogic.pdb
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\FBAppUI\obj\Debug\FBAppUI.csprojAssemblyReference.cache
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\FBAppUI\obj\Debug\FBAppUI.ClosestEventsForm.resources
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\FBAppUI\obj\Debug\FBAppUI.FriendlyStatisticsForm.resources
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\FBAppUI\obj\Debug\FBAppUI.HelpForm.resources
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\FBAppUI\obj\Debug\FBAppUI.MainForm.resources
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\FBAppUI\obj\Debug\FBAppUI.Properties.Resources.resources
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\FBAppUI\obj\Debug\FBAppUI.csproj.GenerateResource.cache
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\FBAppUI\obj\Debug\FBAppUI.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\FBAppUI\obj\Debug\FBAppUI.csproj.CopyComplete
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\FBAppUI\obj\Debug\FBAppUI.exe
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\FBAppUI\obj\Debug\FBAppUI.pdb

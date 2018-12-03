@@ -1,0 +1,11 @@
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\A19 Ex01 Aline 000802480 Uri 201465234\AppLogic\obj\Debug\FacebookAppLogic.csprojAssemblyReference.cache
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\A19 Ex01 Aline 000802480 Uri 201465234\AppLogic\obj\Debug\FacebookAppLogic.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\AppLogic\bin\Debug\FacebookAppLogic.dll
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\AppLogic\bin\Debug\FacebookAppLogic.pdb
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\AppLogic\bin\Debug\Facebook.dll
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\AppLogic\bin\Debug\FbGraphApiWrapper.dll
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\AppLogic\obj\Debug\FacebookAppLogic.csprojAssemblyReference.cache
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\AppLogic\obj\Debug\FacebookAppLogic.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\AppLogic\obj\Debug\FacebookAppLogic.csproj.CopyComplete
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\AppLogic\obj\Debug\FacebookAppLogic.dll
+C:\Users\Asus\Desktop\IDC\שנה ג\c# 2\hw2\hw2DP\AppLogic\obj\Debug\FacebookAppLogic.pdb
