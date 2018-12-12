@@ -6,20 +6,22 @@ namespace FacebookAppLogic
     {
         private readonly User r_LoggedInUser;
         private FeatureFactory m_FeatureFactory;
+        private StatisticFactory m_StatisticFactory;
         private FriendsListFeature m_FriendsListFeature;
         private ClosestEventsFeature m_ClosestEventsFeature;
         private MostLikedPhotoFeature m_MostLikedPhotoFeature;
         private ClosestFriendsFeature m_ClosestFriendsFeature;
-        private HometownStatistics m_HometownStatistics;
-        private GenderStatistics m_GenderStatistics;
-        private BirthdayStatistic m_BirthdayStatistics;
-        private CommonReligionStatistics m_CommonReligionStatistics;
+        private HometownStatistic m_HometownStatistic;
+        private GenderStatistic m_GenderStatistic;
+        private BirthdayStatistic m_BirthdayStatistic;
+        private ReligionStatistic m_ReligionStatistic;
 
 
         public AppLogic(User i_LoggedInUser)
         {
             r_LoggedInUser = i_LoggedInUser;
             m_FeatureFactory = new FeatureFactory(r_LoggedInUser);
+            m_StatisticFactory = new StatisticFactory(r_LoggedInUser);
             initiateFeatures();
         }
 
@@ -29,10 +31,10 @@ namespace FacebookAppLogic
             m_FriendsListFeature = (FriendsListFeature)m_FeatureFactory.CreateFeature("FriendsList");
             m_ClosestFriendsFeature = (ClosestFriendsFeature)m_FeatureFactory.CreateFeature("ClosestFriends");
             m_ClosestEventsFeature = (ClosestEventsFeature)m_FeatureFactory.CreateFeature("ClosestEvents");
-            m_HometownStatistics = new HometownStatistics(r_LoggedInUser);
-            m_GenderStatistics = new GenderStatistics(r_LoggedInUser);
-            m_BirthdayStatistics = new BirthdayStatistic(r_LoggedInUser);
-            m_CommonReligionStatistics = new CommonReligionStatistics(r_LoggedInUser);
+            m_HometownStatistic = (HometownStatistic)m_StatisticFactory.CreateStatistic("Hometown");
+            m_GenderStatistic = (GenderStatistic)m_StatisticFactory.CreateStatistic("Gender");
+            m_BirthdayStatistic = (BirthdayStatistic)m_StatisticFactory.CreateStatistic("Birthday");
+            m_ReligionStatistic = (ReligionStatistic)m_StatisticFactory.CreateStatistic("Religion");
         }
 
         public MostLikedPhotoFeature MostLikedPhotoFeature
@@ -55,24 +57,24 @@ namespace FacebookAppLogic
             get => m_FriendsListFeature;
         }
 
-        public HometownStatistics HometownStatistics
+        public HometownStatistic HometownStatistic
         {
-            get => m_HometownStatistics;
+            get => m_HometownStatistic;
         }
 
-        public GenderStatistics GenderStatistics
+        public GenderStatistic GenderStatistic
         {
-            get => m_GenderStatistics;
+            get => m_GenderStatistic;
         }
 
-        public BirthdayStatistic BirthdayStatistics
+        public BirthdayStatistic BirthdayStatistic
         {
-            get => m_BirthdayStatistics;
+            get => m_BirthdayStatistic;
         }
 
-        public CommonReligionStatistics CommonReligionStatistics
+        public ReligionStatistic CommonReligionStatistic
         {
-            get => m_CommonReligionStatistics;
+            get => m_ReligionStatistic;
         }
     }
 }

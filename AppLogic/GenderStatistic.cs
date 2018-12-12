@@ -3,23 +3,21 @@
 
 namespace FacebookAppLogic
 {
-    public class GenderStatistics : IStatistic
+    public class GenderStatistic : Statistic
     {
         private readonly string r_Description;
-        private readonly User r_LoggedInUser;
         private double m_MaleFriends = 0;
         private double m_MalePercent;
         private double m_FemalePercent;
         private double m_FemaleFriends = 0;
 
-        public GenderStatistics(User i_User)
+        public GenderStatistic(User i_User) : base(i_User)
         {
-            r_LoggedInUser = i_User;
             r_Description = "Male/Female Statistics:";
             FillStatistic();
         }
 
-        public string Description
+        public override string Description
         {
             get => r_Description;
         }
@@ -44,9 +42,9 @@ namespace FacebookAppLogic
             get => m_FemalePercent;
         }
 
-        public void FillStatistic()
+        public override void FillStatistic()
         {       
-            foreach (User friend in r_LoggedInUser.Friends)
+            foreach (User friend in LoggedInUser.Friends)
             {
                 if (friend.Gender == User.eGender.male)
                 {
@@ -57,8 +55,8 @@ namespace FacebookAppLogic
                     m_FemaleFriends++;
                 }
             }
-            m_MalePercent = m_MaleFriends / r_LoggedInUser.Friends.Count;
-            m_FemalePercent = m_FemaleFriends / r_LoggedInUser.Friends.Count;
+            m_MalePercent = m_MaleFriends / LoggedInUser.Friends.Count;
+            m_FemalePercent = m_FemaleFriends / LoggedInUser.Friends.Count;
         }
     }
 }

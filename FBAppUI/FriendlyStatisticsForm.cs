@@ -28,17 +28,17 @@ namespace FBAppUI
         private void ButtonHometownStat_Click(object sender, EventArgs e)
         {
             ListBoxStat.Items.Clear();
-            LabelStat.Text = r_AppLogic.HometownStatistics.Description;
+            LabelStat.Text = r_AppLogic.HometownStatistic.Description;
             LabelStat.Visible = true;
             ListBoxStat.Visible = true;
-            if (r_AppLogic.HometownStatistics.MostFriendlyHometowns == null)
+            if (r_AppLogic.HometownStatistic.MostFriendlyHometowns == null)
             {
                 MessageBox.Show("You currently have no friends");
             }
             else
             {
                 
-                foreach(KeyValuePair<City, int> entry in r_AppLogic.HometownStatistics.MostFriendlyHometowns)
+                foreach(KeyValuePair<City, int> entry in r_AppLogic.HometownStatistic.MostFriendlyHometowns)
                 {
                     ListBoxStat.Items.Add("City: " + entry.Key + " - Amount of friends: " + entry.Value);
                 } 
@@ -48,19 +48,19 @@ namespace FBAppUI
         private void ButtonGenderStatistics_Click(object sender, EventArgs e)
         {
             ListBoxStat.Items.Clear();
-            LabelStat.Text = r_AppLogic.GenderStatistics.Description;
+            LabelStat.Text = r_AppLogic.GenderStatistic.Description;
             LabelStat.Visible = true;
             ListBoxStat.Visible = true;
-            if(r_AppLogic.GenderStatistics.MaleFriends == 0 && r_AppLogic.GenderStatistics.FemaleFriends == 0)
+            if(r_AppLogic.GenderStatistic.MaleFriends == 0 && r_AppLogic.GenderStatistic.FemaleFriends == 0)
             {
                 MessageBox.Show("You currently have no friends");
             }
             else
             {
-                ListBoxStat.Items.Add("You have " + r_AppLogic.GenderStatistics.MaleFriends + " male friends");
-                ListBoxStat.Items.Add(r_AppLogic.GenderStatistics.MalePercent + " percent male friends");
-                ListBoxStat.Items.Add("You have " + r_AppLogic.GenderStatistics.FemaleFriends + " female friends");
-                ListBoxStat.Items.Add(r_AppLogic.GenderStatistics.FemalePercent + " percent female friends");
+                ListBoxStat.Items.Add("You have " + r_AppLogic.GenderStatistic.MaleFriends + " male friends");
+                ListBoxStat.Items.Add(r_AppLogic.GenderStatistic.MalePercent + " percent male friends");
+                ListBoxStat.Items.Add("You have " + r_AppLogic.GenderStatistic.FemaleFriends + " female friends");
+                ListBoxStat.Items.Add(r_AppLogic.GenderStatistic.FemalePercent + " percent female friends");
             }
         }
 
@@ -78,15 +78,15 @@ namespace FBAppUI
         {
             ListBoxStat.Items.Clear();
             ListBoxStat.Visible = true;
-            LabelStat.Text = r_AppLogic.BirthdayStatistics.Description;
+            LabelStat.Text = r_AppLogic.BirthdayStatistic.Description;
             LabelStat.Visible = true;
-            if(r_AppLogic.BirthdayStatistics.SameBirthdayList == null)
+            if(r_AppLogic.BirthdayStatistic.SameBirthdayList == null)
             {
                 MessageBox.Show("You currently have no friends");
             }
             else
             {
-                foreach(User friend in r_AppLogic.BirthdayStatistics.SameBirthdayList)
+                foreach(User friend in r_AppLogic.BirthdayStatistic.SameBirthdayList)
                 {
                     ListBoxStat.Items.Add(friend.FirstName + " " + friend.LastName);
                 }
@@ -98,15 +98,15 @@ namespace FBAppUI
         {
             ListBoxStat.Items.Clear();
             ListBoxStat.Visible = true;
-            LabelStat.Text = r_AppLogic.CommonReligionStatistics.Description;
+            LabelStat.Text = r_AppLogic.CommonReligionStatistic.Description;
             LabelStat.Visible = true;
-            if (r_AppLogic.CommonReligionStatistics.ReligionsList == null)
+            if (r_AppLogic.CommonReligionStatistic.ReligionsList == null)
             {
                 MessageBox.Show("You currently have no friends");
             }
             else
             {
-                foreach(KeyValuePair<string, int> religion in r_AppLogic.CommonReligionStatistics.ReligionsList)
+                foreach(KeyValuePair<string, int> religion in r_AppLogic.CommonReligionStatistic.ReligionsList)
                 {
                     ListBoxStat.Items.Add(religion.Value + " practice " + religion.Key);
                 }

@@ -53,14 +53,15 @@
     <Compile Include="FeatureFactory.cs" />
     <Compile Include="FriendsListFeature.cs" />
     <Compile Include="BirthdayStatistic.cs" />
-    <Compile Include="CommonReligionStatistics.cs" />
+    <Compile Include="ReligionStatistic.cs" />
     <Compile Include="GenderStatistic.cs" />
-    <Compile Include="HometownStatistics.cs" />
+    <Compile Include="HometownStatistic.cs" />
     <Compile Include="IStatistic.cs" />
     <Compile Include="IFeature.cs" />
     <Compile Include="MostLikedPhotoFeature.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Statistic.cs" />
+    <Compile Include="StatisticFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="SUBMIT DP IDC A19 Ex01 Aline 000802480 Uri 201465234.txt" />
