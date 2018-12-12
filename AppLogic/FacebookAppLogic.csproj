@@ -64,6 +64,9 @@
     <Compile Include="StatisticFactory.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="A19 Ex01 Aline 000802480 Uri 201465234.docx" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="SUBMIT DP IDC A19 Ex01 Aline 000802480 Uri 201465234.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
