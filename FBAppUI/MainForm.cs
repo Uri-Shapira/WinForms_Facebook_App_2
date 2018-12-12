@@ -164,9 +164,9 @@ namespace FBAppUI
 
         private void ButtonMostLikedPic_Click(object i_sender, EventArgs e)
         {
-            if (m_AppLogic.MostLikedPhotoFeature.MostLikedPhoto != null)
+            if (m_AppLogic.MostLikedPhotoFilter.MostLikedPhoto != null)
             {
-                PictureBoxMostLikedPhoto.LoadAsync(m_AppLogic.MostLikedPhotoFeature.MostLikedPhoto.URL);
+                PictureBoxMostLikedPhoto.LoadAsync(m_AppLogic.MostLikedPhotoFilter.MostLikedPhoto.URL);
             }
             else
             {

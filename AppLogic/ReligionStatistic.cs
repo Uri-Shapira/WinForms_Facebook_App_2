@@ -4,18 +4,20 @@ using System.Collections.Generic;
 
 namespace FacebookAppLogic
 {
-    public class ReligionStatistic : Statistic
+    public class CommonReligionStatistics : IStatisticsFeature
     {
         private readonly string r_Description;
+        private readonly User r_LoggedInUser;
         private Dictionary<string, int> m_ReligionsList = new Dictionary<string, int>();
 
-        public ReligionStatistic(User i_User) : base(i_User)
+        public CommonReligionStatistics(User i_User)
         {
             r_Description = "Most Common Religions:";
+            r_LoggedInUser = i_User;
             FillStatistic();
         }
         
-        public override string Description
+        public string Description
         {
             get => r_Description;
         }
@@ -25,11 +27,11 @@ namespace FacebookAppLogic
             get => m_ReligionsList;
         }
 
-        public override void FillStatistic()
+        public void FillStatistic()
         {
             if(m_ReligionsList != null)
             {
-                foreach (User friend in LoggedInUser.Friends)
+                foreach (User friend in r_LoggedInUser.Friends)
                 {
                     if (m_ReligionsList.ContainsKey(friend.Religion))
                     {

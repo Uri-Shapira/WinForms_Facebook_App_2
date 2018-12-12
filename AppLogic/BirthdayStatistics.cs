@@ -4,18 +4,20 @@ using System.Collections.Generic;
 
 namespace FacebookAppLogic
 {
-    public class BirthdayStatistic : Statistic
+    public class BirthdayStatistics : IStatisticsFeature
     {
         private readonly string r_Description;
+        private readonly User r_LoggedInUser;
         private List<User> m_SameBirthdayList = new List<User>();
 
-        public BirthdayStatistic(User i_User) : base(i_User)
+        public BirthdayStatistics(User i_User)
         {
             r_Description = "Friends With Your Birthday:";
+            r_LoggedInUser = i_User;
             FillStatistic();
         }
 
-        public override string Description
+        public string Description
         {
             get => r_Description;
         }
@@ -25,11 +27,11 @@ namespace FacebookAppLogic
             get => m_SameBirthdayList;
         }
 
-        public override void FillStatistic()
+        public void FillStatistic()
         {
-            foreach (User friend in LoggedInUser.Friends)
+            foreach (User friend in r_LoggedInUser.Friends)
             {
-                if (friend.Birthday == LoggedInUser.Birthday)
+                if (friend.Birthday == r_LoggedInUser.Birthday)
                 {
                     m_SameBirthdayList.Add(friend);
                 }

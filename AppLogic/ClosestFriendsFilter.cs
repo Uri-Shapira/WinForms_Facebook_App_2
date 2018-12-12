@@ -1,24 +1,27 @@
 ﻿using System.Collections.Generic;
 using FacebookWrapper.ObjectModel;
 
+
 namespace FacebookAppLogic
 {
-    public class ClosestFriendsFeature : Feature
+    public class ClosestFriendsFilter : IFeature
     {
+        private readonly User r_LoggedInUser;
 
-        public ClosestFriendsFeature (User i_LoggedInUser) : base(i_LoggedInUser)
+        public ClosestFriendsFilter (User i_LoggedInUser)
         {
             Description = "Clicking this feature will show you the friends that are at the same location as you at any given time.";
+            r_LoggedInUser = i_LoggedInUser;
             ImplementFeature();
         }
 
-        public override string Description { get; }
+        public string Description { get; }
 
-        public override void ImplementFeature()
+        public void ImplementFeature()
         {
-            foreach (User friend in LoggedInUser.Friends)
+            foreach (User friend in r_LoggedInUser.Friends)
             {
-                if (friend.Location == LoggedInUser.Location)
+                if (friend.Location == r_LoggedInUser.Location)
                 {
                     ClosestFriends.Add(friend);
                 }

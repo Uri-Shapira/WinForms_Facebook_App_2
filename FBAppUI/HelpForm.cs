@@ -20,7 +20,7 @@ namespace FBAppUI
 
         private void LabelMostLikedPhoto_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(m_AppLogic.MostLikedPhotoFeature.Description);
+            MessageBox.Show(m_AppLogic.MostLikedPhotoFilter.Description);
         }
 
         private void LabelClosestFriends_Click(object sender, EventArgs e)

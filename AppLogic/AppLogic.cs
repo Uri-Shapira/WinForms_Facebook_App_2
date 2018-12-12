@@ -5,76 +5,72 @@ namespace FacebookAppLogic
     public class AppLogic
     {
         private readonly User r_LoggedInUser;
-        private FeatureFactory m_FeatureFactory;
-        private StatisticFactory m_StatisticFactory;
-        private FriendsListFeature m_FriendsListFeature;
-        private ClosestEventsFeature m_ClosestEventsFeature;
-        private MostLikedPhotoFeature m_MostLikedPhotoFeature;
-        private ClosestFriendsFeature m_ClosestFriendsFeature;
-        private HometownStatistic m_HometownStatistic;
-        private GenderStatistic m_GenderStatistic;
-        private BirthdayStatistic m_BirthdayStatistic;
-        private ReligionStatistic m_ReligionStatistic;
+        private FriendsListFilter m_FriendsListFilter;
+        private ClosestEventsFilter m_ClosestEventsFilter;
+        private MostLikedPhotoFilter m_MostLikedPhotoFilter;
+        private ClosestFriendsFilter m_ClosestFriendsFilter;
+        private HometownStatistics m_HometownStatistics;
+        private GenderStatistics m_GenderStatistics;
+        private BirthdayStatistics m_BirthdayStatistics;
+        private CommonReligionStatistics m_CommonReligionStatistics;
 
 
         public AppLogic(User i_LoggedInUser)
         {
             r_LoggedInUser = i_LoggedInUser;
-            m_FeatureFactory = new FeatureFactory(r_LoggedInUser);
-            m_StatisticFactory = new StatisticFactory(r_LoggedInUser);
             initiateFeatures();
         }
 
         private void initiateFeatures()
         {
-            m_MostLikedPhotoFeature = (MostLikedPhotoFeature)m_FeatureFactory.CreateFeature("MostLikedPhoto");
-            m_FriendsListFeature = (FriendsListFeature)m_FeatureFactory.CreateFeature("FriendsList");
-            m_ClosestFriendsFeature = (ClosestFriendsFeature)m_FeatureFactory.CreateFeature("ClosestFriends");
-            m_ClosestEventsFeature = (ClosestEventsFeature)m_FeatureFactory.CreateFeature("ClosestEvents");
-            m_HometownStatistic = (HometownStatistic)m_StatisticFactory.CreateStatistic("Hometown");
-            m_GenderStatistic = (GenderStatistic)m_StatisticFactory.CreateStatistic("Gender");
-            m_BirthdayStatistic = (BirthdayStatistic)m_StatisticFactory.CreateStatistic("Birthday");
-            m_ReligionStatistic = (ReligionStatistic)m_StatisticFactory.CreateStatistic("Religion");
+            m_MostLikedPhotoFilter = new MostLikedPhotoFilter(r_LoggedInUser);
+            m_ClosestFriendsFilter = new ClosestFriendsFilter(r_LoggedInUser);
+            m_ClosestEventsFilter = new ClosestEventsFilter(r_LoggedInUser);
+            m_FriendsListFilter = new FriendsListFilter(r_LoggedInUser);
+            m_HometownStatistics = new HometownStatistics(r_LoggedInUser);
+            m_GenderStatistics = new GenderStatistics(r_LoggedInUser);
+            m_BirthdayStatistics = new BirthdayStatistics(r_LoggedInUser);
+            m_CommonReligionStatistics = new CommonReligionStatistics(r_LoggedInUser);
         }
 
-        public MostLikedPhotoFeature MostLikedPhotoFeature
+        public MostLikedPhotoFilter MostLikedPhotoFilter
         {
-            get => m_MostLikedPhotoFeature;
+            get => m_MostLikedPhotoFilter;
         }
 
-        public ClosestFriendsFeature ClosestFriendsFilter
+        public ClosestFriendsFilter ClosestFriendsFilter
         {
-            get => m_ClosestFriendsFeature;
+            get => m_ClosestFriendsFilter;
         }
 
-        public ClosestEventsFeature ClosestEventsFilter
+        public ClosestEventsFilter ClosestEventsFilter
         {
-            get => m_ClosestEventsFeature;
+            get => m_ClosestEventsFilter;
         }
 
-        public FriendsListFeature FriendsListFilter
+        public FriendsListFilter FriendsListFilter
         {
-            get => m_FriendsListFeature;
+            get => m_FriendsListFilter;
         }
 
-        public HometownStatistic HometownStatistic
+        public HometownStatistics HometownStatistics
         {
-            get => m_HometownStatistic;
+            get => m_HometownStatistics;
         }
 
-        public GenderStatistic GenderStatistic
+        public GenderStatistics GenderStatistics
         {
-            get => m_GenderStatistic;
+            get => m_GenderStatistics;
         }
 
-        public BirthdayStatistic BirthdayStatistic
+        public BirthdayStatistics BirthdayStatistics
         {
-            get => m_BirthdayStatistic;
+            get => m_BirthdayStatistics;
         }
 
-        public ReligionStatistic CommonReligionStatistic
+        public CommonReligionStatistics CommonReligionStatistics
         {
-            get => m_ReligionStatistic;
+            get => m_CommonReligionStatistics;
         }
     }
 }
