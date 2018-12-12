@@ -49,10 +49,10 @@
     <Compile Include="AppLogic.cs" />
     <Compile Include="ClosestEventsFilter.cs" />
     <Compile Include="ClosestFriendsFilter.cs" />
+    <Compile Include="CommonReligionStatistics.cs" />
     <Compile Include="FriendsListFilter.cs" />
     <Compile Include="BirthdayStatistics.cs" />
-    <Compile Include="CommonReligionStatistics.cs" />
-    <Compile Include="GenderStatistic.cs" />
+    <Compile Include="GenderStatistics.cs" />
     <Compile Include="HometownStatistics.cs" />
     <Compile Include="IStatisticsFeature.cs" />
     <Compile Include="IFeature.cs" />

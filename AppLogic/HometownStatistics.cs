@@ -4,13 +4,13 @@ using System.Collections.Generic;
 
 namespace FacebookAppLogic
 {
-    public class HometownStatistic: IStatistic
+    public class HometownStatistics : IStatisticsFeature
     {
         private readonly string r_Description;
         private readonly User r_LoggedInUser;
         private Dictionary<City, int> m_MostFriendlyHometowns = new Dictionary<City, int>();
 
-        public HometownStatistic (User i_User)
+        public HometownStatistics(User i_User)
         {
             r_Description = "Your 3 Friendliest Cities:";
             r_LoggedInUser = i_User;
@@ -70,7 +70,7 @@ namespace FacebookAppLogic
 
         private Dictionary<City, int> FullFriendsCityList()
         {
-            Dictionary<City, int> result = null; 
+            Dictionary<City, int> result = null;
             foreach (User friend in r_LoggedInUser.Friends)
             {
                 if (result.ContainsKey(friend.Hometown))
