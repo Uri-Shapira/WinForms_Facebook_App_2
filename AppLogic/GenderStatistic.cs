@@ -3,7 +3,7 @@
 
 namespace FacebookAppLogic
 {
-    public class GenderStatistics : IStatisticsFeature
+    public class GenderStatistics : IStatistic
     {
         private readonly string r_Description;
         private readonly User r_LoggedInUser;

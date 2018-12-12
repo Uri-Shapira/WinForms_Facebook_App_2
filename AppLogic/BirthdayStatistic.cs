@@ -4,13 +4,13 @@ using System.Collections.Generic;
 
 namespace FacebookAppLogic
 {
-    public class BirthdayStatistics : IStatisticsFeature
+    public class BirthdayStatistic : IStatistic
     {
         private readonly string r_Description;
         private readonly User r_LoggedInUser;
         private List<User> m_SameBirthdayList = new List<User>();
 
-        public BirthdayStatistics(User i_User)
+        public BirthdayStatistic(User i_User)
         {
             r_Description = "Friends With Your Birthday:";
             r_LoggedInUser = i_User;

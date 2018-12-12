@@ -5,52 +5,54 @@ namespace FacebookAppLogic
     public class AppLogic
     {
         private readonly User r_LoggedInUser;
-        private FriendsListFilter m_FriendsListFilter;
-        private ClosestEventsFilter m_ClosestEventsFilter;
-        private MostLikedPhotoFilter m_MostLikedPhotoFilter;
-        private ClosestFriendsFilter m_ClosestFriendsFilter;
+        private FeatureFactory m_FeatureFactory;
+        private FriendsListFeature m_FriendsListFeature;
+        private ClosestEventsFeature m_ClosestEventsFeature;
+        private MostLikedPhotoFeature m_MostLikedPhotoFeature;
+        private ClosestFriendsFeature m_ClosestFriendsFeature;
         private HometownStatistics m_HometownStatistics;
         private GenderStatistics m_GenderStatistics;
-        private BirthdayStatistics m_BirthdayStatistics;
+        private BirthdayStatistic m_BirthdayStatistics;
         private CommonReligionStatistics m_CommonReligionStatistics;
 
 
         public AppLogic(User i_LoggedInUser)
         {
             r_LoggedInUser = i_LoggedInUser;
+            m_FeatureFactory = new FeatureFactory(r_LoggedInUser);
             initiateFeatures();
         }
 
         private void initiateFeatures()
         {
-            m_MostLikedPhotoFilter = new MostLikedPhotoFilter(r_LoggedInUser);
-            m_ClosestFriendsFilter = new ClosestFriendsFilter(r_LoggedInUser);
-            m_ClosestEventsFilter = new ClosestEventsFilter(r_LoggedInUser);
-            m_FriendsListFilter = new FriendsListFilter(r_LoggedInUser);
+            m_MostLikedPhotoFeature = (MostLikedPhotoFeature)m_FeatureFactory.CreateFeature("MostLikedPhoto");
+            m_FriendsListFeature = (FriendsListFeature)m_FeatureFactory.CreateFeature("FriendsList");
+            m_ClosestFriendsFeature = (ClosestFriendsFeature)m_FeatureFactory.CreateFeature("ClosestFriends");
+            m_ClosestEventsFeature = (ClosestEventsFeature)m_FeatureFactory.CreateFeature("ClosestEvents");
             m_HometownStatistics = new HometownStatistics(r_LoggedInUser);
             m_GenderStatistics = new GenderStatistics(r_LoggedInUser);
-            m_BirthdayStatistics = new BirthdayStatistics(r_LoggedInUser);
+            m_BirthdayStatistics = new BirthdayStatistic(r_LoggedInUser);
             m_CommonReligionStatistics = new CommonReligionStatistics(r_LoggedInUser);
         }
 
-        public MostLikedPhotoFilter MostLikedPhotoFilter
+        public MostLikedPhotoFeature MostLikedPhotoFeature
         {
-            get => m_MostLikedPhotoFilter;
+            get => m_MostLikedPhotoFeature;
         }
 
-        public ClosestFriendsFilter ClosestFriendsFilter
+        public ClosestFriendsFeature ClosestFriendsFilter
         {
-            get => m_ClosestFriendsFilter;
+            get => m_ClosestFriendsFeature;
         }
 
-        public ClosestEventsFilter ClosestEventsFilter
+        public ClosestEventsFeature ClosestEventsFilter
         {
-            get => m_ClosestEventsFilter;
+            get => m_ClosestEventsFeature;
         }
 
-        public FriendsListFilter FriendsListFilter
+        public FriendsListFeature FriendsListFilter
         {
-            get => m_FriendsListFilter;
+            get => m_FriendsListFeature;
         }
 
         public HometownStatistics HometownStatistics
@@ -63,7 +65,7 @@ namespace FacebookAppLogic
             get => m_GenderStatistics;
         }
 
-        public BirthdayStatistics BirthdayStatistics
+        public BirthdayStatistic BirthdayStatistics
         {
             get => m_BirthdayStatistics;
         }

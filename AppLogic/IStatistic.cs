@@ -1,6 +1,6 @@
 ﻿namespace FacebookAppLogic
 {
-    interface IStatisticsFeature
+    interface IStatistic
     {
         string Description { get; }
 

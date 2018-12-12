@@ -4,20 +4,18 @@ using System.Collections.Generic;
 
 namespace FacebookAppLogic
 {
-    public class FriendsListFilter : IFeature
+    public class FriendsListFeature : Feature
     {
-        private readonly User r_LoggedInUser;
         private readonly string r_Description;
         private List<User> m_FriendsList = new List<User>();
 
-        public FriendsListFilter(User i_User)
+        public FriendsListFeature(User i_User) : base(i_User)
         {
-            r_LoggedInUser = i_User;
             r_Description = "Clicking this feature will show you your entire list of friends.";
             ImplementFeature();
         }
 
-        public string Description
+        public override string Description
         {
             get => r_Description;
         }
@@ -27,9 +25,9 @@ namespace FacebookAppLogic
             get => m_FriendsList;
         }
 
-        public void ImplementFeature()
+        public override void ImplementFeature()
         {
-            foreach (User friend in r_LoggedInUser.Friends)
+            foreach (User friend in LoggedInUser.Friends)
             {
                 m_FriendsList.Add(friend);
             }

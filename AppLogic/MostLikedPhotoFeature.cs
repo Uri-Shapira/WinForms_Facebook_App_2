@@ -3,10 +3,9 @@ using FacebookWrapper.ObjectModel;
 
 namespace FacebookAppLogic
 {
-    public class MostLikedPhotoFilter : IFeature
+    public class MostLikedPhotoFeature : Feature
     {
         private readonly string r_Descripition;
-        private readonly User r_LoggedInUser;
         private List<Photo> m_PhotoList = new List<Photo>();
         private Photo m_MostLikedPhoto;
 
@@ -15,21 +14,20 @@ namespace FacebookAppLogic
             get => m_MostLikedPhoto;
         }
 
-        public string Description
+        public override string Description
         {
             get => r_Descripition;
         }
 
-        public MostLikedPhotoFilter(User i_User)
+        public MostLikedPhotoFeature(User i_User) : base(i_User)
         {
             r_Descripition = "Clicking this feature will show you which of your photos your friends like most, and how many likes it recieved.";
-            r_LoggedInUser = i_User;
             ImplementFeature();
         }
 
         private void aggregateUserPhotos()
         {
-            foreach (Album album in r_LoggedInUser.Albums)
+            foreach (Album album in LoggedInUser.Albums)
             {
                 for (int i = 0; i < album.Count; i++)
                 {
@@ -38,7 +36,7 @@ namespace FacebookAppLogic
             }
         }
 
-        public void ImplementFeature()
+        public override void ImplementFeature()
         {
             aggregateUserPhotos();
             if (m_PhotoList.Count != 0)

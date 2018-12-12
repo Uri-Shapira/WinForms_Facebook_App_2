@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace FacebookAppLogic
 {
-    public class CommonReligionStatistics : IStatisticsFeature
+    public class CommonReligionStatistics : IStatistic
     {
         private readonly string r_Description;
         private readonly User r_LoggedInUser;
