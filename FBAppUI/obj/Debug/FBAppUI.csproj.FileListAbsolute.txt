@@ -30,3 +30,6 @@ C:\Users\Asus\Desktop\hw2\FBAppUI\bin\Debug\FBAppUI.pdb
 C:\Users\Asus\Desktop\hw2\FBAppUI\bin\Debug\FacebookAppLogic.dll
 C:\Users\Asus\Desktop\hw2\FBAppUI\bin\Debug\FacebookAppLogic.pdb
 C:\Users\Asus\Desktop\hw2\FBAppUI\obj\Debug\FBAppUI.csproj.CopyComplete
+C:\Users\Asus\Desktop\hw2\FBAppUI\bin\Debug\FacebookQuiz.dll
+C:\Users\Asus\Desktop\hw2\FBAppUI\bin\Debug\FacebookQuiz.pdb
+C:\Users\Asus\Desktop\hw2\FBAppUI\obj\Debug\FBAppUI.QuizForm.resources

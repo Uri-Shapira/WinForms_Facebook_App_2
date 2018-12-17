@@ -4,17 +4,20 @@ using System.Drawing;
 using System.Windows.Forms;
 using FacebookWrapper.ObjectModel;
 using FacebookAppLogic;
+using FacebookQuiz;
 
 
 namespace FBAppUI
 {
     public partial class MainForm : Form
     {
-        private User m_LoggedInUser;
+        private User LoggedInUser { get; set; }
         private AppLogic m_AppLogic;
         private FriendlyStatisticsForm m_FriendlyStatisticsForm;
         private HelpForm m_HelpForm;
         private ClosestEventsForm m_ClosestEventsForm;
+        private AbstractQuiz Quiz { get; set;}
+        private QuizForm QuizForm { get; set; }
 
         public MainForm()
         {
@@ -64,10 +67,11 @@ namespace FBAppUI
                );
             if (!string.IsNullOrEmpty(result.AccessToken))
             {
-                m_LoggedInUser = result.LoggedInUser;
-                m_AppLogic = new AppLogic(m_LoggedInUser);
-                LabelWelcomeMessage.Text = "Welcome Back " + m_LoggedInUser.FirstName;
+                LoggedInUser = result.LoggedInUser;
+                m_AppLogic = new AppLogic(LoggedInUser);
+                LabelWelcomeMessage.Text = "Welcome Back " + LoggedInUser.FirstName;
                 renderLoginVisibility();
+                Quiz = QuizFactory.CreateQuiz(LoggedInUser);
                 getProfilePicture();
             }
         }
@@ -79,7 +83,7 @@ namespace FBAppUI
 
         private void getProfilePicture()
         {
-            PictureBoxProfilePic.LoadAsync(m_LoggedInUser.PictureNormalURL);
+            PictureBoxProfilePic.LoadAsync(LoggedInUser.PictureNormalURL);
         }
 
         private void renderLoginVisibility()
@@ -98,6 +102,7 @@ namespace FBAppUI
             ButtonLogin.Visible = false;
             WelcomeFacebookPlusLabel.Visible = false;
             LoginToEnterLabel.Visible = false;
+            buttonQuiz.Visible = true;
         }
 
         private void renderLogoutVisibility()
@@ -117,6 +122,7 @@ namespace FBAppUI
             ButtonHelp.Visible = false;
             ButtonFriendStats.Visible = false;
             ButtonLogin.Visible = true;
+            buttonQuiz.Visible = false;
             ButtonPostStatus.Text = "Post New Status";
             ButtonPostStatus.BackColor = SystemColors.ButtonHighlight;
             ButtonPostStatus.ForeColor = Color.Black;
@@ -136,7 +142,7 @@ namespace FBAppUI
                 ButtonPostStatus.Text = "Post New Status";
                 ButtonPostStatus.BackColor = SystemColors.ButtonHighlight;
                 ButtonPostStatus.ForeColor = Color.Black;
-                m_LoggedInUser.PostStatus(TextBoxAddPost.Text);
+                LoggedInUser.PostStatus(TextBoxAddPost.Text);
             }
         }
 
@@ -225,6 +231,12 @@ namespace FBAppUI
         {
             m_FriendlyStatisticsForm = new FriendlyStatisticsForm(m_AppLogic);
             m_FriendlyStatisticsForm.ShowDialog();
+        }
+
+        private void buttonQuiz_MouseClick(object sender, MouseEventArgs e)
+        {
+            QuizForm = new QuizForm(LoggedInUser);
+            QuizForm.ShowDialog();
         }
     }
 }

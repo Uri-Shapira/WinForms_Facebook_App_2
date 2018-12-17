@@ -10,7 +10,8 @@ namespace FacebookQuiz
     {
         public AmericanQuiz() : base()
         {
-
+            quizTitle = "How well do you know America?";
+            BuildQuiz();
         }
 
         public override void BuildQuiz()

@@ -8,7 +8,9 @@ namespace FacebookQuiz
 {
     public abstract class AbstractQuiz
     {
-        protected List<Question> Questions { get; set; }
+        public List<Question> Questions { get; set; }
+
+        public string quizTitle = "";
   
         public AbstractQuiz()
         {

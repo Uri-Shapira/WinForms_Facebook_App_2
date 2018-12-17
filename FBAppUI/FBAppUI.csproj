@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>FBAppUI.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -79,6 +82,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuizForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuizForm.Designer.cs">
+      <DependentUpon>QuizForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ClosestEventsForm.resx">
       <DependentUpon>ClosestEventsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,6 +104,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuizForm.resx">
+      <DependentUpon>QuizForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -115,6 +127,10 @@
     <ProjectReference Include="..\AppLogic\FacebookAppLogic.csproj">
       <Project>{feabb6a2-2be2-4df6-b983-de806cd6ba67}</Project>
       <Name>FacebookAppLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FacebookQuiz\FacebookQuiz.csproj">
+      <Project>{d2a3788b-f798-46f2-aebc-09e09f0e85be}</Project>
+      <Name>FacebookQuiz</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

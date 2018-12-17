@@ -49,6 +49,7 @@
             this.ButtonFriendStats = new System.Windows.Forms.Button();
             this.WelcomeFacebookPlusLabel = new System.Windows.Forms.Label();
             this.LoginToEnterLabel = new System.Windows.Forms.Label();
+            this.buttonQuiz = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxMostLikedPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxEnterImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxProfilePic)).BeginInit();
@@ -261,6 +262,7 @@
             this.WelcomeFacebookPlusLabel.Size = new System.Drawing.Size(445, 51);
             this.WelcomeFacebookPlusLabel.TabIndex = 24;
             this.WelcomeFacebookPlusLabel.Text = "Welcome to Facebook Plus! ";
+           
             // 
             // LoginToEnterLabel
             // 
@@ -272,12 +274,24 @@
             this.LoginToEnterLabel.TabIndex = 25;
             this.LoginToEnterLabel.Text = "Login to access new Facebook features";
             // 
+            // buttonQuiz
+            // 
+            this.buttonQuiz.Location = new System.Drawing.Point(609, 292);
+            this.buttonQuiz.Name = "buttonQuiz";
+            this.buttonQuiz.Size = new System.Drawing.Size(118, 62);
+            this.buttonQuiz.TabIndex = 26;
+            this.buttonQuiz.Text = "Start Quiz";
+            this.buttonQuiz.UseVisualStyleBackColor = true;
+            this.buttonQuiz.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonQuiz_MouseClick);
+            this.buttonQuiz.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(973, 533);
+            this.Controls.Add(this.buttonQuiz);
             this.Controls.Add(this.LoginToEnterLabel);
             this.Controls.Add(this.WelcomeFacebookPlusLabel);
             this.Controls.Add(this.ButtonFriendStats);
@@ -334,6 +348,7 @@
         private System.Windows.Forms.Button ButtonFriendStats;
         private System.Windows.Forms.Label WelcomeFacebookPlusLabel;
         private System.Windows.Forms.Label LoginToEnterLabel;
+        private System.Windows.Forms.Button buttonQuiz;
     }
 }
 

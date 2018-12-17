@@ -1,0 +1,9 @@
+C:\Users\Asus\Desktop\hw2\FacebookQuiz\bin\Debug\FacebookQuiz.dll
+C:\Users\Asus\Desktop\hw2\FacebookQuiz\bin\Debug\FacebookQuiz.pdb
+C:\Users\Asus\Desktop\hw2\FacebookQuiz\bin\Debug\FbGraphApiWrapper.dll
+C:\Users\Asus\Desktop\hw2\FacebookQuiz\bin\Debug\Facebook.dll
+C:\Users\Asus\Desktop\hw2\FacebookQuiz\obj\Debug\FacebookQuiz.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\hw2\FacebookQuiz\obj\Debug\FacebookQuiz.csproj.CopyComplete
+C:\Users\Asus\Desktop\hw2\FacebookQuiz\obj\Debug\FacebookQuiz.dll
+C:\Users\Asus\Desktop\hw2\FacebookQuiz\obj\Debug\FacebookQuiz.pdb
+C:\Users\Asus\Desktop\hw2\FacebookQuiz\obj\Debug\FacebookQuiz.csprojAssemblyReference.cache
