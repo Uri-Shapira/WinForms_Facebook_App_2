@@ -43,11 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FullQuiz.cs" />
-    <Compile Include="FullQuizBuilder.cs" />
+    <Compile Include="UserRanker.cs" />
+    <Compile Include="IUserRankerBuilder.cs" />
+    <Compile Include="UltimateUserRankerBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StandardUserRankerBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AppLogic\FacebookAppLogic.csproj">
+      <Project>{FEABB6A2-2BE2-4DF6-B983-DE806CD6BA67}</Project>
+      <Name>FacebookAppLogic</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FacebookQuiz\FacebookQuiz.csproj">
       <Project>{d2a3788b-f798-46f2-aebc-09e09f0e85be}</Project>
       <Name>FacebookQuiz</Name>

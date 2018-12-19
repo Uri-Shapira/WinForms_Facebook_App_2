@@ -9,6 +9,7 @@ namespace FacebookAppLogic
         private readonly User r_LoggedInUser;
         private List<Photo> m_PhotoList = new List<Photo>();
         private Photo m_MostLikedPhoto;
+        public int MostLikes { get { return MostLikedPhoto.LikedBy.Count; } }
 
         public Photo MostLikedPhoto
         {
