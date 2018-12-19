@@ -16,3 +16,10 @@ C:\Users\Asus\Desktop\hw2\AppLogic\obj\Debug\FacebookAppLogic.csproj.CoreCompile
 C:\Users\Asus\Desktop\hw2\AppLogic\obj\Debug\FacebookAppLogic.csproj.CopyComplete
 C:\Users\Asus\Desktop\hw2\AppLogic\obj\Debug\FacebookAppLogic.dll
 C:\Users\Asus\Desktop\hw2\AppLogic\obj\Debug\FacebookAppLogic.pdb
+C:\Users\b\Source\Repos\hw2DP\AppLogic\bin\Debug\FacebookAppLogic.dll
+C:\Users\b\Source\Repos\hw2DP\AppLogic\bin\Debug\FacebookAppLogic.pdb
+C:\Users\b\Source\Repos\hw2DP\AppLogic\obj\Debug\FacebookAppLogic.csprojAssemblyReference.cache
+C:\Users\b\Source\Repos\hw2DP\AppLogic\obj\Debug\FacebookAppLogic.csproj.CoreCompileInputs.cache
+C:\Users\b\Source\Repos\hw2DP\AppLogic\obj\Debug\FacebookAppLogic.csproj.CopyComplete
+C:\Users\b\Source\Repos\hw2DP\AppLogic\obj\Debug\FacebookAppLogic.dll
+C:\Users\b\Source\Repos\hw2DP\AppLogic\obj\Debug\FacebookAppLogic.pdb

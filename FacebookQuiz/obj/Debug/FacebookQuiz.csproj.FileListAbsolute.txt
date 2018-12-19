@@ -7,3 +7,12 @@ C:\Users\Asus\Desktop\hw2\FacebookQuiz\obj\Debug\FacebookQuiz.csproj.CopyComplet
 C:\Users\Asus\Desktop\hw2\FacebookQuiz\obj\Debug\FacebookQuiz.dll
 C:\Users\Asus\Desktop\hw2\FacebookQuiz\obj\Debug\FacebookQuiz.pdb
 C:\Users\Asus\Desktop\hw2\FacebookQuiz\obj\Debug\FacebookQuiz.csprojAssemblyReference.cache
+C:\Users\b\Source\Repos\hw2DP\FacebookQuiz\bin\Debug\FacebookQuiz.dll
+C:\Users\b\Source\Repos\hw2DP\FacebookQuiz\bin\Debug\FacebookQuiz.pdb
+C:\Users\b\Source\Repos\hw2DP\FacebookQuiz\bin\Debug\FbGraphApiWrapper.dll
+C:\Users\b\Source\Repos\hw2DP\FacebookQuiz\bin\Debug\Facebook.dll
+C:\Users\b\Source\Repos\hw2DP\FacebookQuiz\obj\Debug\FacebookQuiz.csprojAssemblyReference.cache
+C:\Users\b\Source\Repos\hw2DP\FacebookQuiz\obj\Debug\FacebookQuiz.csproj.CoreCompileInputs.cache
+C:\Users\b\Source\Repos\hw2DP\FacebookQuiz\obj\Debug\FacebookQuiz.csproj.CopyComplete
+C:\Users\b\Source\Repos\hw2DP\FacebookQuiz\obj\Debug\FacebookQuiz.dll
+C:\Users\b\Source\Repos\hw2DP\FacebookQuiz\obj\Debug\FacebookQuiz.pdb
