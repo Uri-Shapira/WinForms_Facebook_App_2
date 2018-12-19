@@ -33,3 +33,4 @@ C:\Users\Asus\Desktop\hw2\FBAppUI\obj\Debug\FBAppUI.csproj.CopyComplete
 C:\Users\Asus\Desktop\hw2\FBAppUI\bin\Debug\FacebookQuiz.dll
 C:\Users\Asus\Desktop\hw2\FBAppUI\bin\Debug\FacebookQuiz.pdb
 C:\Users\Asus\Desktop\hw2\FBAppUI\obj\Debug\FBAppUI.QuizForm.resources
+C:\Users\Asus\Desktop\hw2\FBAppUI\obj\Debug\FBAppUI.UserRankerForm.resources

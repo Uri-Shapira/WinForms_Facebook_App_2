@@ -6,7 +6,7 @@ using FacebookWrapper.ObjectModel;
 
 namespace FacebookQuiz
 {
-    class AmericanQuiz : AbstractQuiz
+    public class AmericanQuiz : AbstractQuiz
     {
         public AmericanQuiz() : base()
         {

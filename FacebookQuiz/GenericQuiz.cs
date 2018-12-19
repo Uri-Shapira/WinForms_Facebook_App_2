@@ -6,7 +6,7 @@ using System.Text;
 
 namespace FacebookQuiz
 {
-    class GenericQuiz : AbstractQuiz
+    public class GenericQuiz : AbstractQuiz
     {
 
 

@@ -18,6 +18,7 @@ namespace FBAppUI
         private ClosestEventsForm m_ClosestEventsForm;
         private AbstractQuiz Quiz { get; set;}
         private QuizForm QuizForm { get; set; }
+        private UserRankerForm UserRankerForm { get; set; }
 
         public MainForm()
         {
@@ -103,6 +104,7 @@ namespace FBAppUI
             WelcomeFacebookPlusLabel.Visible = false;
             LoginToEnterLabel.Visible = false;
             buttonQuiz.Visible = true;
+            buttonUserRanker.Visible = true;
         }
 
         private void renderLogoutVisibility()
@@ -123,6 +125,7 @@ namespace FBAppUI
             ButtonFriendStats.Visible = false;
             ButtonLogin.Visible = true;
             buttonQuiz.Visible = false;
+            buttonUserRanker.Visible = false;
             ButtonPostStatus.Text = "Post New Status";
             ButtonPostStatus.BackColor = SystemColors.ButtonHighlight;
             ButtonPostStatus.ForeColor = Color.Black;
@@ -237,6 +240,12 @@ namespace FBAppUI
         {
             QuizForm = new QuizForm(LoggedInUser);
             QuizForm.ShowDialog();
+        }
+
+        private void buttonUserRanker_Click(object sender, EventArgs e)
+        {
+            this.UserRankerForm = new UserRankerForm(LoggedInUser);
+            UserRankerForm.ShowDialog();
         }
     }
 }

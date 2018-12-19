@@ -88,6 +88,12 @@
     <Compile Include="QuizForm.Designer.cs">
       <DependentUpon>QuizForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserRankerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserRankerForm.Designer.cs">
+      <DependentUpon>UserRankerForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ClosestEventsForm.resx">
       <DependentUpon>ClosestEventsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuizForm.resx">
       <DependentUpon>QuizForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserRankerForm.resx">
+      <DependentUpon>UserRankerForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -131,6 +140,10 @@
     <ProjectReference Include="..\FacebookQuiz\FacebookQuiz.csproj">
       <Project>{d2a3788b-f798-46f2-aebc-09e09f0e85be}</Project>
       <Name>FacebookQuiz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FullQuiz\FullQuiz.csproj">
+      <Project>{EC9F1CCF-6EF8-403E-8A4E-B84FEB799BBD}</Project>
+      <Name>FullQuiz</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -50,6 +50,7 @@
             this.WelcomeFacebookPlusLabel = new System.Windows.Forms.Label();
             this.LoginToEnterLabel = new System.Windows.Forms.Label();
             this.buttonQuiz = new System.Windows.Forms.Button();
+            this.buttonUserRanker = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxMostLikedPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxEnterImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxProfilePic)).BeginInit();
@@ -262,7 +263,6 @@
             this.WelcomeFacebookPlusLabel.Size = new System.Drawing.Size(445, 51);
             this.WelcomeFacebookPlusLabel.TabIndex = 24;
             this.WelcomeFacebookPlusLabel.Text = "Welcome to Facebook Plus! ";
-           
             // 
             // LoginToEnterLabel
             // 
@@ -276,14 +276,25 @@
             // 
             // buttonQuiz
             // 
-            this.buttonQuiz.Location = new System.Drawing.Point(609, 292);
+            this.buttonQuiz.Location = new System.Drawing.Point(246, 236);
             this.buttonQuiz.Name = "buttonQuiz";
             this.buttonQuiz.Size = new System.Drawing.Size(118, 62);
             this.buttonQuiz.TabIndex = 26;
             this.buttonQuiz.Text = "Start Quiz";
             this.buttonQuiz.UseVisualStyleBackColor = true;
-            this.buttonQuiz.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonQuiz_MouseClick);
             this.buttonQuiz.Visible = false;
+            this.buttonQuiz.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonQuiz_MouseClick);
+            // 
+            // buttonUserRanker
+            // 
+            this.buttonUserRanker.Location = new System.Drawing.Point(624, 236);
+            this.buttonUserRanker.Name = "buttonUserRanker";
+            this.buttonUserRanker.Size = new System.Drawing.Size(118, 62);
+            this.buttonUserRanker.TabIndex = 27;
+            this.buttonUserRanker.Text = "User Ranking -Test Yourself!";
+            this.buttonUserRanker.UseVisualStyleBackColor = true;
+            this.buttonUserRanker.Visible = false;
+            this.buttonUserRanker.Click += new System.EventHandler(this.buttonUserRanker_Click);
             // 
             // MainForm
             // 
@@ -291,6 +302,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(973, 533);
+            this.Controls.Add(this.buttonUserRanker);
             this.Controls.Add(this.buttonQuiz);
             this.Controls.Add(this.LoginToEnterLabel);
             this.Controls.Add(this.WelcomeFacebookPlusLabel);
@@ -349,6 +361,7 @@
         private System.Windows.Forms.Label WelcomeFacebookPlusLabel;
         private System.Windows.Forms.Label LoginToEnterLabel;
         private System.Windows.Forms.Button buttonQuiz;
+        private System.Windows.Forms.Button buttonUserRanker;
     }
 }
 

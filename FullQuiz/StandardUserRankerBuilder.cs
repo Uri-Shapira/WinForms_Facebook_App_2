@@ -5,7 +5,7 @@ using FacebookWrapper.ObjectModel;
 
 namespace FullQuiz
 {
-    class StandardUserRankerBuilder : IUserRankerBuilder
+    public class StandardUserRankerBuilder : IUserRankerBuilder
     {
         public User LoggedInUser { get; }
         public StandardUserRankerBuilder(User i_User)
@@ -22,7 +22,7 @@ namespace FullQuiz
 
         public void InitializeUserRanker(UserRanker i_UserRanker)
         {
-            i_UserRanker.Description = "";
+            i_UserRanker.Description = "Test Yourself - Standard User Ranking Test!";
             i_UserRanker.KnowledgeQuiz = QuizFactory.CreateQuiz(LoggedInUser);
             i_UserRanker.AspirationQuiz = AspirationQuizFactory.CreateQuiz(LoggedInUser);
             i_UserRanker.MostLikedPhotoFilter = new MostLikedPhotoFilter(LoggedInUser);
