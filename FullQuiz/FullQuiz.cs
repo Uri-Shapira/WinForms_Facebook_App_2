@@ -6,6 +6,7 @@ namespace FullQuiz
     public class FullQuiz
     {
         public string Description { get; set; }
+        public string ;
         public AbstractAspirationQuiz AspirationQuiz { get; set; }
         public AbstractQuiz KnowledgeQuiz { get; set; }
 

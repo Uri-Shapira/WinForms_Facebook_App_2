@@ -60,7 +60,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SUBMIT DP IDC A19 Ex01 Aline 000802480 Uri 201465234.txt" />
+    <Content Include="SUBMIT DP IDC A19 Ex01 Aline Guetta 000802480 Uri Shapira 201465234.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
