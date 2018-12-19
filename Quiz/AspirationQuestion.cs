@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Quiz
+namespace AspirationQuiz
 {
-    class AspirationQuestion
+    public class AspirationQuestion
     {
         public int value { get; set; }
         public string Question { get; set; }
