@@ -1,0 +1,15 @@
+C:\Users\Asus\Desktop\hw2\FullQuiz\obj\Debug\FullQuiz.csprojAssemblyReference.cache
+C:\Users\Asus\Desktop\hw2\FullQuiz\obj\Debug\FullQuiz.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\hw2\FullQuiz\bin\Debug\FullQuiz.dll
+C:\Users\Asus\Desktop\hw2\FullQuiz\bin\Debug\FullQuiz.pdb
+C:\Users\Asus\Desktop\hw2\FullQuiz\bin\Debug\AspirationQuiz.dll
+C:\Users\Asus\Desktop\hw2\FullQuiz\bin\Debug\FacebookAppLogic.dll
+C:\Users\Asus\Desktop\hw2\FullQuiz\bin\Debug\FacebookQuiz.dll
+C:\Users\Asus\Desktop\hw2\FullQuiz\bin\Debug\FbGraphApiWrapper.dll
+C:\Users\Asus\Desktop\hw2\FullQuiz\bin\Debug\Facebook.dll
+C:\Users\Asus\Desktop\hw2\FullQuiz\bin\Debug\FacebookAppLogic.pdb
+C:\Users\Asus\Desktop\hw2\FullQuiz\bin\Debug\FacebookQuiz.pdb
+C:\Users\Asus\Desktop\hw2\FullQuiz\bin\Debug\AspirationQuiz.pdb
+C:\Users\Asus\Desktop\hw2\FullQuiz\obj\Debug\FullQuiz.csproj.CopyComplete
+C:\Users\Asus\Desktop\hw2\FullQuiz\obj\Debug\FullQuiz.dll
+C:\Users\Asus\Desktop\hw2\FullQuiz\obj\Debug\FullQuiz.pdb

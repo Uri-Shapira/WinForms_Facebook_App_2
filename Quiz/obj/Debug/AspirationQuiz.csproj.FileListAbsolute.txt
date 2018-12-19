@@ -1,0 +1,11 @@
+C:\Users\Asus\Desktop\hw2\Quiz\obj\Debug\AspirationQuiz.csprojAssemblyReference.cache
+C:\Users\Asus\Desktop\hw2\Quiz\obj\Debug\AspirationQuiz.Properties.Resources.resources
+C:\Users\Asus\Desktop\hw2\Quiz\obj\Debug\AspirationQuiz.csproj.GenerateResource.cache
+C:\Users\Asus\Desktop\hw2\Quiz\obj\Debug\AspirationQuiz.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\hw2\Quiz\bin\Debug\AspirationQuiz.dll
+C:\Users\Asus\Desktop\hw2\Quiz\bin\Debug\AspirationQuiz.pdb
+C:\Users\Asus\Desktop\hw2\Quiz\bin\Debug\FbGraphApiWrapper.dll
+C:\Users\Asus\Desktop\hw2\Quiz\bin\Debug\Facebook.dll
+C:\Users\Asus\Desktop\hw2\Quiz\obj\Debug\AspirationQuiz.csproj.CopyComplete
+C:\Users\Asus\Desktop\hw2\Quiz\obj\Debug\AspirationQuiz.dll
+C:\Users\Asus\Desktop\hw2\Quiz\obj\Debug\AspirationQuiz.pdb

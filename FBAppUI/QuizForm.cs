@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using FacebookQuiz;
 using FacebookWrapper.ObjectModel;
@@ -16,7 +10,7 @@ namespace FBAppUI
         private AbstractQuiz Quiz { get; set; }
         private int CurrentQuestion { get; set; }
         private int UserAnswer { get; set; }
-        private int Score;
+        private int Score { get; set; }
 
         public QuizForm(User i_User)
         {
@@ -47,6 +41,7 @@ namespace FBAppUI
             radioButtonAnswerC.Text = answers[2];
             radioButtonAnswerD.Text = answers[3];
             labelQuestionNumber.Text = "1";
+            
         }
 
         private void moveToNextQuestion()
