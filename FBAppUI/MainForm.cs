@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using FacebookWrapper.ObjectModel;
 using FacebookAppLogic;
 using FacebookQuiz;
-
+using FullQuiz;
 
 namespace FBAppUI
 {
@@ -18,7 +18,8 @@ namespace FBAppUI
         private ClosestEventsForm m_ClosestEventsForm;
         private AbstractQuiz Quiz { get; set;}
         private QuizForm QuizForm { get; set; }
-        private UserRankerForm UserRankerForm { get; set; }
+        private StandardUserRankerForm UserRankerForm { get; set; }
+        private IUserRankerBuilder UserRankerBuilder { get; set; }
 
         public MainForm()
         {
@@ -244,7 +245,8 @@ namespace FBAppUI
 
         private void buttonUserRanker_Click(object sender, EventArgs e)
         {
-            this.UserRankerForm = new UserRankerForm(LoggedInUser);
+            UserRankerBuilder = new StandardUserRankerBuilder(LoggedInUser);
+            this.UserRankerForm = new StandardUserRankerForm(LoggedInUser, UserRankerBuilder);
             UserRankerForm.ShowDialog();
         }
     }

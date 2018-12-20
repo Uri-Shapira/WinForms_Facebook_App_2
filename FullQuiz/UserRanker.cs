@@ -12,12 +12,5 @@ namespace FullQuiz
         public AbstractQuiz UltimateKnowledgeQuiz { get; set; }
         public MostLikedPhotoFilter MostLikedPhotoFilter { get; set; }
         public string[] RankerFeedback { get; set; } 
-        /*
-        public FullQuiz(AbstractQuiz i_KnowledgeQuiz, AbstractAspirationQuiz i_AspirationQuiz)
-        {
-            AspirationQuiz = i_AspirationQuiz;
-            KnowledgeQuiz = i_KnowledgeQuiz;
-        }
-        */
     }
 }
