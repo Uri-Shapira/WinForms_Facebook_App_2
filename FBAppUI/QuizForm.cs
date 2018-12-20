@@ -13,16 +13,62 @@ namespace FBAppUI
 {
     public partial class QuizForm : Form
     {
-        private AbstractQuiz Quiz { get; set; }
-        private int CurrentQuestion { get; set; }
-        private int UserAnswer { get; set; }
-        private int Score;
+        private QuizLogic Logic { get; set; }
 
         public QuizForm(User i_User)
         {
-            Quiz = QuizFactory.CreateQuiz(i_User);
+            Logic = new QuizLogic(i_User);
             InitializeComponent();
-            initializeQuiz();
+            initializeQuestion();
+        }
+
+        private void initializeQuestion()
+        {
+            Question currentQuestion = Logic.Questions[Logic.CurrentQuestion];
+            labelQuestionText.Text = currentQuestion.Prompt;
+            radioButtonAnswerA.Text = currentQuestion.Answers[0];
+            radioButtonAnswerB.Text = currentQuestion.Answers[1];
+            radioButtonAnswerC.Text = currentQuestion.Answers[2];
+            radioButtonAnswerD.Text = currentQuestion.Answers[3];
+            labelQuestionNumber.Text = (Logic.CurrentQuestion+1).ToString();
+        }
+
+        private void moveToNextQuestion()
+        {
+            if(Logic.CurrentQuestion < Logic.Questions.Count-1)
+            {
+                Logic.CurrentQuestion++;
+                initializeQuestion();
+            }
+            else
+            {
+                finishQuiz();
+            }
+        }
+
+        private void finishQuiz()
+        {
+            MessageBox.Show(string.Format("You answered correctly to {0} out of {1} questions", Logic.Score, Logic.Questions.Count));
+            this.Close();
+        }
+
+        private void buttonSubmit_Click(object sender, EventArgs e)
+        {
+            var checkedButton = groupBoxAnswers.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
+            Question currentQuestion = Logic.Questions[Logic.CurrentQuestion];
+            if(checkedButton == null)
+            {
+                MessageBox.Show("Please enter your answer");
+            }else if (checkedButton.Text == currentQuestion.Answers[currentQuestion.CorrectAnswer])
+            {
+                Logic.Score++;
+            }
+            moveToNextQuestion(); 
+        }
+        
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void labelQuizTitle_Click(object sender, EventArgs e)
@@ -34,74 +80,5 @@ namespace FBAppUI
         {
 
         }
-
-        private void initializeQuiz()
-        {
-            CurrentQuestion = 0;
-            string firstQuestion = Quiz.Questions[0].Prompt;
-            string[] answers = Quiz.Questions[0].Answers;
-            Console.WriteLine(firstQuestion);
-            labelQuestionText.Text = firstQuestion;
-            radioButtonAnswerA.Text = answers[0];
-            radioButtonAnswerB.Text = answers[1];
-            radioButtonAnswerC.Text = answers[2];
-            radioButtonAnswerD.Text = answers[3];
-            labelQuestionNumber.Text = "1";
-        }
-
-        private void moveToNextQuestion()
-        {
-            if(CurrentQuestion < Quiz.Questions.Count - 1)
-            {
-                CurrentQuestion++;
-                string Question = Quiz.Questions[CurrentQuestion].Prompt;
-                string[] answers = Quiz.Questions[CurrentQuestion].Answers;
-                labelQuestionText.Text = Question;
-                radioButtonAnswerA.Text = answers[0];
-                radioButtonAnswerB.Text = answers[1];
-                radioButtonAnswerC.Text = answers[2];
-                radioButtonAnswerD.Text = answers[3];
-                int questionNumber = CurrentQuestion + 1;
-                labelQuestionNumber.Text = questionNumber.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Total score: " + Score );
-                this.Close();
-            }
-        }
-
-        private void buttonSubmit_Click(object sender, EventArgs e)
-        {
-            if(radioButtonAnswerA.Checked)
-            {
-                UserAnswer = 0;
-            }
-            else if (radioButtonAnswerB.Checked)
-            {
-                UserAnswer = 1;
-            }
-            else if (radioButtonAnswerC.Checked)
-            {
-                UserAnswer = 2;
-            }
-            else if (radioButtonAnswerD.Checked)
-            {
-                UserAnswer = 3;
-            }
-
-            if(UserAnswer == Quiz.Questions[CurrentQuestion].CorrectAnswer)
-            {
-                Score++;
-            }
-            moveToNextQuestion();
-
-        }
-        
-        private void buttonExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
     }
 }

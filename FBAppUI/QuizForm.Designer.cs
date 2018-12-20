@@ -42,6 +42,8 @@
             this.labelD = new System.Windows.Forms.Label();
             this.labelQuestionText = new System.Windows.Forms.Label();
             this.labelQuestionNumber = new System.Windows.Forms.Label();
+            this.groupBoxAnswers = new System.Windows.Forms.GroupBox();
+            this.groupBoxAnswers.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelQuizTitle
@@ -60,7 +62,7 @@
             // 
             this.radioButtonAnswerA.AutoSize = true;
             this.radioButtonAnswerA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.radioButtonAnswerA.Location = new System.Drawing.Point(194, 213);
+            this.radioButtonAnswerA.Location = new System.Drawing.Point(49, 13);
             this.radioButtonAnswerA.Name = "radioButtonAnswerA";
             this.radioButtonAnswerA.Size = new System.Drawing.Size(119, 24);
             this.radioButtonAnswerA.TabIndex = 1;
@@ -72,7 +74,7 @@
             // 
             this.radioButtonAnswerB.AutoSize = true;
             this.radioButtonAnswerB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.radioButtonAnswerB.Location = new System.Drawing.Point(473, 213);
+            this.radioButtonAnswerB.Location = new System.Drawing.Point(328, 13);
             this.radioButtonAnswerB.Name = "radioButtonAnswerB";
             this.radioButtonAnswerB.Size = new System.Drawing.Size(119, 24);
             this.radioButtonAnswerB.TabIndex = 2;
@@ -84,7 +86,7 @@
             // 
             this.radioButtonAnswerC.AutoSize = true;
             this.radioButtonAnswerC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.radioButtonAnswerC.Location = new System.Drawing.Point(194, 297);
+            this.radioButtonAnswerC.Location = new System.Drawing.Point(49, 97);
             this.radioButtonAnswerC.Name = "radioButtonAnswerC";
             this.radioButtonAnswerC.Size = new System.Drawing.Size(119, 24);
             this.radioButtonAnswerC.TabIndex = 3;
@@ -96,7 +98,7 @@
             // 
             this.radioButtonAnswerD.AutoSize = true;
             this.radioButtonAnswerD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.radioButtonAnswerD.Location = new System.Drawing.Point(473, 297);
+            this.radioButtonAnswerD.Location = new System.Drawing.Point(328, 97);
             this.radioButtonAnswerD.Name = "radioButtonAnswerD";
             this.radioButtonAnswerD.Size = new System.Drawing.Size(119, 24);
             this.radioButtonAnswerD.TabIndex = 4;
@@ -108,7 +110,7 @@
             // 
             this.labelQuestionNumberTitle.AutoSize = true;
             this.labelQuestionNumberTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.labelQuestionNumberTitle.Location = new System.Drawing.Point(232, 83);
+            this.labelQuestionNumberTitle.Location = new System.Drawing.Point(187, 38);
             this.labelQuestionNumberTitle.Name = "labelQuestionNumberTitle";
             this.labelQuestionNumberTitle.Size = new System.Drawing.Size(208, 39);
             this.labelQuestionNumberTitle.TabIndex = 5;
@@ -142,7 +144,7 @@
             // 
             this.labelA.AutoSize = true;
             this.labelA.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.labelA.Location = new System.Drawing.Point(161, 213);
+            this.labelA.Location = new System.Drawing.Point(16, 13);
             this.labelA.Name = "labelA";
             this.labelA.Size = new System.Drawing.Size(27, 26);
             this.labelA.TabIndex = 8;
@@ -152,7 +154,7 @@
             // 
             this.labelB.AutoSize = true;
             this.labelB.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.labelB.Location = new System.Drawing.Point(440, 213);
+            this.labelB.Location = new System.Drawing.Point(295, 13);
             this.labelB.Name = "labelB";
             this.labelB.Size = new System.Drawing.Size(27, 26);
             this.labelB.TabIndex = 9;
@@ -162,7 +164,7 @@
             // 
             this.labelC.AutoSize = true;
             this.labelC.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.labelC.Location = new System.Drawing.Point(161, 295);
+            this.labelC.Location = new System.Drawing.Point(16, 95);
             this.labelC.Name = "labelC";
             this.labelC.Size = new System.Drawing.Size(28, 26);
             this.labelC.TabIndex = 10;
@@ -172,7 +174,7 @@
             // 
             this.labelD.AutoSize = true;
             this.labelD.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.labelD.Location = new System.Drawing.Point(440, 297);
+            this.labelD.Location = new System.Drawing.Point(295, 97);
             this.labelD.Name = "labelD";
             this.labelD.Size = new System.Drawing.Size(28, 26);
             this.labelD.TabIndex = 11;
@@ -180,47 +182,58 @@
             // 
             // labelQuestionText
             // 
-            this.labelQuestionText.AutoSize = true;
             this.labelQuestionText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.labelQuestionText.ForeColor = System.Drawing.Color.CadetBlue;
-            this.labelQuestionText.Location = new System.Drawing.Point(189, 156);
+            this.labelQuestionText.Location = new System.Drawing.Point(140, 103);
             this.labelQuestionText.Name = "labelQuestionText";
-            this.labelQuestionText.Size = new System.Drawing.Size(135, 25);
+            this.labelQuestionText.Size = new System.Drawing.Size(514, 53);
             this.labelQuestionText.TabIndex = 12;
             this.labelQuestionText.Text = "Question Text";
+            this.labelQuestionText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelQuestionNumber
             // 
             this.labelQuestionNumber.AutoSize = true;
             this.labelQuestionNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.labelQuestionNumber.ForeColor = System.Drawing.Color.DarkCyan;
-            this.labelQuestionNumber.Location = new System.Drawing.Point(445, 83);
+            this.labelQuestionNumber.Location = new System.Drawing.Point(401, 39);
             this.labelQuestionNumber.Name = "labelQuestionNumber";
             this.labelQuestionNumber.Size = new System.Drawing.Size(36, 39);
             this.labelQuestionNumber.TabIndex = 13;
             this.labelQuestionNumber.Text = "0";
+            // 
+            // groupBoxAnswers
+            // 
+            this.groupBoxAnswers.Controls.Add(this.labelD);
+            this.groupBoxAnswers.Controls.Add(this.labelC);
+            this.groupBoxAnswers.Controls.Add(this.labelB);
+            this.groupBoxAnswers.Controls.Add(this.labelA);
+            this.groupBoxAnswers.Controls.Add(this.radioButtonAnswerD);
+            this.groupBoxAnswers.Controls.Add(this.radioButtonAnswerC);
+            this.groupBoxAnswers.Controls.Add(this.radioButtonAnswerB);
+            this.groupBoxAnswers.Controls.Add(this.radioButtonAnswerA);
+            this.groupBoxAnswers.Location = new System.Drawing.Point(145, 200);
+            this.groupBoxAnswers.Name = "groupBoxAnswers";
+            this.groupBoxAnswers.Size = new System.Drawing.Size(485, 132);
+            this.groupBoxAnswers.TabIndex = 14;
+            this.groupBoxAnswers.TabStop = false;
             // 
             // QuizForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 456);
+            this.Controls.Add(this.groupBoxAnswers);
             this.Controls.Add(this.labelQuestionNumber);
             this.Controls.Add(this.labelQuestionText);
-            this.Controls.Add(this.labelD);
-            this.Controls.Add(this.labelC);
-            this.Controls.Add(this.labelB);
-            this.Controls.Add(this.labelA);
             this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.labelQuestionNumberTitle);
-            this.Controls.Add(this.radioButtonAnswerD);
-            this.Controls.Add(this.radioButtonAnswerC);
-            this.Controls.Add(this.radioButtonAnswerB);
-            this.Controls.Add(this.radioButtonAnswerA);
             this.Controls.Add(this.labelQuizTitle);
             this.Name = "QuizForm";
             this.Text = "QuizForm";
+            this.groupBoxAnswers.ResumeLayout(false);
+            this.groupBoxAnswers.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,5 +255,6 @@
         private System.Windows.Forms.Label labelD;
         private System.Windows.Forms.Label labelQuestionText;
         private System.Windows.Forms.Label labelQuestionNumber;
+        private System.Windows.Forms.GroupBox groupBoxAnswers;
     }
 }
